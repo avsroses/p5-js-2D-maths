@@ -1,3 +1,9 @@
+// p = point
+let p = {}
+let pSize = 20;
+let speed = 2;
+let theta;
+
 function setup() {
   createCanvas(innerWidth, innerHeight);
   //noLoop();
