@@ -63,7 +63,13 @@ function draw() {
   ///////////
   //radians//
   ///////////
-  TAU = 2 * PI
-  arc(width/2, height/2, 400, 400, 0, random(TAU))
+  //TAU = 2 * PI
+  //arc(width/2, height/2, 400, 400, 0, random(TAU))
 
+  ////////////////////
+  //angular velocity//
+  ////////////////////
+  p.x += cos(theta) * speed;
+  p.y += sin(theta) * speed;
+  circle(p.x, p.y, pSize)
 }
