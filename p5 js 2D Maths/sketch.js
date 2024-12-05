@@ -50,16 +50,19 @@ function draw() {
   let y;
   const size = 40;
   for (let i = 0; i < 1000; i++) {
+    //layer 1
     x = randomGaussian(width/2, 150)
     y = randomGaussian(height/2, 150)
-    fill(88, 191, 98, 25)
-    square(x, y, size);
+    fill(88, 191, 98, 15)
+    square(x, y, size*3);
 
+    //layer 2
     x = randomGaussian(width/2, 100)
     y = randomGaussian(height/2, 100)
-    fill(35, 46, 145, 25)
-    square(x, y, size);
+    fill(35, 46, 145, 20)
+    square(x, y, size*2);
 
+    //layer 3
     x = randomGaussian(width/2, 100)
     y = randomGaussian(height/2, 100)
     fill(70, 20, 120, 25)
@@ -69,8 +72,10 @@ function draw() {
   ///////////
   //radians//
   ///////////
-  //TAU = 2 * PI
-  //arc(width/2, height/2, 400, 400, 0, random(TAU))
+  /*
+  TAU = 2 * PI
+  arc(width/2, height/2, 400, 400, 0, random(TAU))
+  */
 
   ////////////////////
   //angular velocity//
