@@ -6,8 +6,8 @@ let theta;
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
-  //noLoop();
-  rectMode(CENTER);
+  //noLoop(); //needed for distribution
+  rectMode(CENTER); 
   //
   theta = random(TAU)
   p = {x:width/2, y:height/2}
