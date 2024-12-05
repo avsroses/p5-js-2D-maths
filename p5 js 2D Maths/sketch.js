@@ -1,7 +1,7 @@
 // p = point
 let p = {}
 let pSize = 20;
-let speed = 2;
+let speed = 4;
 let theta;
 
 function setup() {
@@ -74,14 +74,44 @@ function draw() {
   //radians//
   ///////////
   /*
-  TAU = 2 * PI
+  //TAU = 2 * PI - the number of radians in a circle
   arc(width/2, height/2, 400, 400, 0, random(TAU))
   */
 
   ////////////////////
   //angular velocity//
   ////////////////////
+  /*
   p.x += cos(theta) * speed;
   p.y += sin(theta) * speed;
-  circle(p.x, p.y, pSize)
+  circle(p.x, p.y, pSize) */
+
+  ///////////////////////
+  //angle from position//
+  ///////////////////////
+  /*
+  //difference between source object and target on y axis
+  let dy = mouseY - p.y;
+  //difference between source object and target on x axis
+  let dx = mouseX - p.x;
+  //calculate angle between object and mouse
+  theta = atan2(dy, dx);
+  p.x += cos(theta) * speed;
+  p.y += sin(theta) * speed;
+  circle(p.x, p.y, pSize); */
+
+  ////////////////////////////////////
+  //use cos and sin to draw a circle//
+  ////////////////////////////////////
+  //define radius of circle
+  const r = 200;
+  //initially set angles as t = 0
+  //loop through 2 * PI, adding a little to t each time
+  for(let t = 0; t < TAU; t += 0.1) {
+    let x = (sin(t) * r) + width/2; //offset by center x 
+    let y = (cos(t) * r) + height/2; //offset by center y 
+    //draw point
+    circle(x, y, 5);
+  }
+
 }
