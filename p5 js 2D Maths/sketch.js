@@ -108,8 +108,9 @@ function draw() {
   //initially set angles as t = 0
   //loop through 2 * PI, adding a little to t each time
   for(let t = 0; t < TAU; t += 0.1) {
-    let x = (sin(t) * r) + width/2; //offset by center x 
-    let y = (cos(t) * r) + height/2; //offset by center y 
+    //multiplication will happen first, then division, then addition
+    let x = sin(t) * r + width/2; //offset by center x 
+    let y = cos(t) * r + height/2; //offset by center y 
     //draw point
     circle(x, y, 5);
   }
