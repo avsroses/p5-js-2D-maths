@@ -7,9 +7,10 @@ let theta;
 function setup() {
   createCanvas(innerWidth, innerHeight);
   //noLoop(); //needed for distribution
-  rectMode(CENTER); 
-  //
+  rectMode(CENTER); //draw rectangle from center
+  //assign a random angle in radians
   theta = random(TAU)
+  //assign position of notional point p to middle of screen
   p = {x:width/2, y:height/2}
 }
 
