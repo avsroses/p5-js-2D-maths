@@ -1,7 +1,10 @@
 function setup() {
   createCanvas(innerWidth, innerHeight);
-  noLoop();
+  //noLoop();
   rectMode(CENTER);
+  //
+  theta = random(TAU)
+  p = {x:width/2, y:height/2}
 }
 
 function draw() {
@@ -35,7 +38,7 @@ function draw() {
   /////////////////////////
   //Gaussian distribution//
   /////////////////////////
-
+  /*
   noStroke();
   let x;
   let y;
@@ -55,5 +58,12 @@ function draw() {
     y = randomGaussian(height/2, 100)
     fill(70, 20, 120, 25)
     square(x, y, size);
-  }
+  } */
+
+  ///////////
+  //radians//
+  ///////////
+  TAU = 2 * PI
+  arc(width/2, height/2, 400, 400, 0, random(TAU))
+
 }
